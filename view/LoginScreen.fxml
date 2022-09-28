@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane accessibleRole="TEXT_FIELD" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreenController">
+   <children>
+      <Label fx:id="schedAppLabel" alignment="TOP_CENTER" layoutX="188.0" layoutY="100.0" prefHeight="72.0" prefWidth="703.0" text="Scheduling Application " textAlignment="CENTER">
+         <font>
+            <Font size="35.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="439.0" layoutX="194.0" layoutY="152.0" stroke="BLACK" strokeType="INSIDE" width="691.0" />
+      <PasswordField fx:id="loginPasswordField" layoutX="367.0" layoutY="349.0" prefHeight="44.0" prefWidth="346.0" promptText="password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="loginUsernameField" layoutX="367.0" layoutY="283.0" prefHeight="44.0" prefWidth="346.0" promptText="username">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="loginButton" alignment="CENTER" layoutX="455.0" layoutY="406.0" mnemonicParsing="false" onAction="#onLoginButton" prefHeight="44.0" prefWidth="170.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="locationLabel" alignment="CENTER" layoutX="220.0" layoutY="540.0" prefHeight="35.0" prefWidth="228.0" text="Location:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loginLocationField" editable="false" layoutX="440.0" layoutY="538.0" prefHeight="40.0" prefWidth="289.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="loginLabel" alignment="CENTER" layoutX="350.0" layoutY="172.0" prefHeight="47.0" prefWidth="379.0" text="Login">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

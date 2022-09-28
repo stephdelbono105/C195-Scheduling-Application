@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportScreenController">
+   <children>
+      <Label layoutX="475.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+       <TabPane layoutX="59.0" layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="969.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+           <tabs>
+               <Tab text="Contact Schedule Report">
+                   <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="464.0" prefWidth="963.0">
+                     <children>
+                        <ComboBox fx:id="appContactBox" layoutY="3.0" onAction="#appByContact" prefHeight="29.0" prefWidth="187.0" promptText="Select A Contact" />
+                        <TableView fx:id="allAppsContactTable" editable="true" fixedCellSize="0.0" layoutY="36.0" prefHeight="575.0" prefWidth="970.0">
+                          <columns>
+                            <TableColumn fx:id="appIdCol" prefWidth="99.99999618530273" text="Appointment ID" />
+                            <TableColumn fx:id="appTitleCol" prefWidth="134.99998474121094" text="Title" />
+                              <TableColumn fx:id="appTypeCol" prefWidth="162.60003662109375" text="Type" />
+                              <TableColumn fx:id="appDescriptionCol" prefWidth="171.20001220703125" text="Description" />
+                              <TableColumn fx:id="appStartCol" prefWidth="145.0" text="Start" />
+                              <TableColumn fx:id="appEndCol" prefWidth="136.5999755859375" text="End" />
+                              <TableColumn fx:id="customerIdCol" prefWidth="127.19989013671875" text="Customer ID" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+                   </content>
+               </Tab>
+               <Tab onSelectionChanged="#appTotalsTab" text="Appointment Totals Report">
+                   <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appTotalsTypeTable" editable="true" fixedCellSize="0.0" layoutY="63.0" prefHeight="540.0" prefWidth="456.0">
+                          <columns>
+                            <TableColumn fx:id="appTypeTotalsCol" prefWidth="285.1999740600586" text="Appointment Type" />
+                            <TableColumn fx:id="appTotalsCol" minWidth="0.0" prefWidth="171.60006713867188" text="Total" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="appMonthTotalTable" editable="true" fixedCellSize="0.0" layoutX="514.0" layoutY="63.0" prefHeight="540.0" prefWidth="456.0">
+                           <columns>
+                              <TableColumn fx:id="appTotalMonthCol" prefWidth="297.199951171875" text="Month" />
+                              <TableColumn fx:id="appTotalMonthTotalCol" minWidth="0.0" prefWidth="158.800048828125" text="Total" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="138.0" layoutY="21.0" text="Appointments By Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="644.0" layoutY="21.0" text="Appointments By Month">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                   </content>
+               </Tab>
+               <Tab onSelectionChanged="#customerByLocationTab" text="Location Report">
+                   <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="394.0" layoutY="40.0" text="Customers By Country ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="customerByCountry" editable="true" fixedCellSize="0.0" layoutX="171.0" layoutY="75.0" prefHeight="496.0" prefWidth="628.0">
+                          <columns>
+                            <TableColumn fx:id="countryName" prefWidth="402.60003662109375" text="Location" />
+                            <TableColumn fx:id="countryCount" minWidth="0.0" prefWidth="224.5999755859375" text="Total" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+                   </content>
+               </Tab>
+           </tabs>
+       </TabPane>
+      <Button layoutX="945.0" layoutY="745.0" mnemonicParsing="false" onAction="#toMainScreen" prefHeight="30.0" prefWidth="83.0" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

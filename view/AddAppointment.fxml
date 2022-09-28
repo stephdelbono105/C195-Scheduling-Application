@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddAppointmentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="590.0" layoutX="48.0" layoutY="99.0" stroke="BLACK" strokeType="INSIDE" width="987.0" />
+      <Label layoutX="387.0" layoutY="23.0" prefHeight="58.0" prefWidth="305.0" text="Add Appointment">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addAppIdTF" disable="true" layoutX="384.0" layoutY="136.0" prefHeight="27.0" prefWidth="402.0" />
+      <TextField fx:id="addAppTitleTF" layoutX="384.0" layoutY="186.0" prefHeight="38.0" prefWidth="402.0" />
+      <Label layoutX="188.0" layoutY="141.0" text="Appointment ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="191.0" text="Appointment Title:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="244.0" text="Description:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="addAppDescriptionTF" layoutX="384.0" layoutY="237.0" prefHeight="79.0" prefWidth="402.0" />
+      <Label layoutX="186.0" layoutY="330.0" text="Appointment Type:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="372.0" text="Location:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="441.0" text="Start Date:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="568.0" text="Contact:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="624.0" text="Customer ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="611.0" layoutY="441.0" text="Start Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="614.0" layoutY="490.0" text="End Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="624.0" text="User ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="753.0" layoutY="704.0" mnemonicParsing="false" onAction="#addAppointmentSave" prefHeight="27.0" prefWidth="120.0" text="Save">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="932.0" layoutY="704.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="40.0" prefWidth="103.0" text="Cancel">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="addAppStartDate" layoutX="317.0" layoutY="441.0" prefHeight="27.0" prefWidth="177.0" />
+      <ComboBox fx:id="addAppContact" layoutX="182.0" layoutY="568.0" prefHeight="27.0" prefWidth="289.0" />
+      <ComboBox fx:id="addAppStartTime" layoutX="716.0" layoutY="441.0" prefHeight="27.0" prefWidth="140.0" />
+      <ComboBox fx:id="addAppEndTime" layoutX="716.0" layoutY="490.0" prefHeight="26.0" prefWidth="140.0" />
+      <TextField fx:id="addAppTypeTF" layoutX="387.0" layoutY="325.0" prefHeight="27.0" prefWidth="266.0" />
+      <TextField fx:id="addAppLocationTF" layoutX="387.0" layoutY="372.0" prefHeight="27.0" prefWidth="266.0" />
+      <TextField fx:id="addAppCustIdTF" layoutX="224.0" layoutY="624.0" prefHeight="27.0" prefWidth="250.0" />
+      <TextField fx:id="addAppUserIdTF" layoutX="646.0" layoutY="624.0" prefHeight="27.0" prefWidth="232.0" />
+      <Label layoutX="186.0" layoutY="490.0" text="End Date:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="addAppEndDate" layoutX="317.0" layoutY="490.0" prefHeight="27.0" prefWidth="177.0" />
+   </children>
+</AnchorPane>

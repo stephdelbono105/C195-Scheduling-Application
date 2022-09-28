@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="255.0" layoutX="45.0" layoutY="476.0" stroke="BLACK" strokeType="INSIDE" width="987.0" />
+      <Label layoutX="416.0" layoutY="26.0" text="Appointments">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <TableView fx:id="allAppointmentsTable" editable="true" fixedCellSize="0.0" layoutX="46.0" layoutY="128.0" onMouseClicked="#loadAppointment" prefHeight="342.0" prefWidth="987.0">
+        <columns>
+          <TableColumn fx:id="appIdCol" prefWidth="73.60000991821289" text="Appt. ID" />
+          <TableColumn fx:id="appTitleCol" prefWidth="82.80001831054688" text="Title" />
+            <TableColumn fx:id="appDescriptionCol" prefWidth="109.99995422363281" text="Description" />
+            <TableColumn fx:id="appLocationCol" prefWidth="101.20001220703125" text="Location" />
+            <TableColumn fx:id="appTypeCol" prefWidth="111.4000244140625" text="Type" />
+            <TableColumn fx:id="appStartCol" prefWidth="126.4000244140625" text="Start" />
+            <TableColumn fx:id="appEndCol" prefWidth="114.4000244140625" text="End" />
+            <TableColumn fx:id="appCustomerIdCol" minWidth="5.20001220703125" prefWidth="99.79998779296875" text="Customer ID" />
+            <TableColumn fx:id="appContactCol" prefWidth="88.2000732421875" text="Contact ID" />
+            <TableColumn fx:id="appUserCol" prefWidth="78.20001220703125" text="User ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="71.0" layoutY="54.0" mnemonicParsing="false" onAction="#toAddAppointment" prefHeight="40.0" prefWidth="210.0" text="Add Appointment">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="426.0" layoutY="739.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="40.0" prefWidth="98.0" text="Delete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="277.0" layoutY="739.0" mnemonicParsing="false" onAction="#updateAppointment" prefHeight="40.0" prefWidth="82.0" text="Update">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="959.0" layoutY="739.0" mnemonicParsing="false" onAction="#toMainScreen" prefHeight="40.0" prefWidth="82.0" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="weeklyAppRB" layoutX="341.0" layoutY="93.0" mnemonicParsing="false" onAction="#weeklyAppSelected" text="Weekly">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="appointmentsTG" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="monthlyAppRB" layoutX="451.0" layoutY="93.0" mnemonicParsing="false" onAction="#monthlyAppSelected" text="Monthly" toggleGroup="$appointmentsTG">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="allAppRB" layoutX="568.0" layoutY="93.0" mnemonicParsing="false" onAction="#allAppSelected" selected="true" text="All Appointments" toggleGroup="$appointmentsTG">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="appIdTF" disable="true" layoutX="206.0" layoutY="496.0" prefHeight="26.0" prefWidth="220.0" />
+      <Label layoutX="74.0" layoutY="499.0" text="Appointment ID:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="541.0" text="Appointment Title:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="582.0" text=" Description:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="627.0" text="Appointment Type:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="499.0" text="Location:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="551.0" text="Start Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="676.0" text="Contact:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="676.0" text="Customer ID:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="676.0" layoutY="675.0" text="User ID:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="736.0" layoutY="554.0" text="Start Time:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="739.0" layoutY="607.0" text="End Time:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="appTitleTF" layoutX="206.0" layoutY="538.0" prefHeight="26.0" prefWidth="220.0" />
+      <TextField fx:id="appDescriptionTF" layoutX="207.0" layoutY="579.0" prefHeight="26.0" prefWidth="220.0" />
+      <TextField fx:id="appTypeTF" layoutX="206.0" layoutY="624.0" prefHeight="26.0" prefWidth="220.0" />
+      <ComboBox fx:id="appContact" layoutX="152.0" layoutY="673.0" prefWidth="150.0" />
+      <TextField fx:id="appCustIdTF" layoutX="450.0" layoutY="672.0" prefHeight="26.0" prefWidth="170.0" />
+      <TextField fx:id="appUserIdTF" layoutX="730.0" layoutY="672.0" prefHeight="26.0" prefWidth="170.0" />
+      <TextField fx:id="appLocationTf" layoutX="549.0" layoutY="496.0" prefHeight="26.0" prefWidth="220.0" />
+      <Label layoutX="486.0" layoutY="607.0" text="End Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="appEndTime" layoutX="815.0" layoutY="605.0" prefHeight="26.0" prefWidth="115.0" />
+      <ComboBox fx:id="appStartTime" layoutX="815.0" layoutY="551.0" prefHeight="26.0" prefWidth="115.0" />
+      <DatePicker fx:id="appStartDate" layoutX="566.0" layoutY="549.0" prefHeight="26.0" prefWidth="134.0" />
+      <DatePicker fx:id="appEndDate" layoutX="568.0" layoutY="604.0" prefHeight="26.0" prefWidth="134.0" />
+      <Button layoutX="594.0" layoutY="739.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="40.0" prefWidth="82.0" text="Cancel">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
